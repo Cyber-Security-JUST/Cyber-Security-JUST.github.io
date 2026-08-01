@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="CyberSecurity Laboratory at JUST - Led by Dr. Mohammad Nowsin Amin Sheikh. Advancing research in SDN, AI, Blockchain, and Cyber-Physical Systems.">
+    <meta name="keywords" content="cybersecurity, JUST, Jashore University, research, SDN, blockchain, AI, network security, Dr. Nowsin">
+    <meta name="author" content="CyberSecurity Lab, JUST">
+    <meta name="theme-color" content="#0a0f1e">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CyberSecurity Lab | JUST">
+    <meta property="og:description" content="Advancing research, innovation, and capacity building in cybersecurity at Jashore University of Science and Technology.">
+    <meta property="og:url" content="https://cyber-security-just.github.io">
+    <title>CyberSecurity Lab | JUST — Dr. Mohammad Nowsin Amin Sheikh</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-bg-grid"></div>
+        <div class="preloader-particles">
+            <div class="p-dot"></div><div class="p-dot"></div><div class="p-dot"></div>
+            <div class="p-dot"></div><div class="p-dot"></div><div class="p-dot"></div>
+            <div class="p-dot"></div><div class="p-dot"></div><div class="p-dot"></div>
+        </div>
+        <div class="preloader-content">
+            <div class="preloader-icon-wrap">
+                <div class="spin-ring spin-ring-1"></div>
+                <div class="spin-ring spin-ring-2"></div>
+                <div class="spin-ring spin-ring-3"></div>
+                <div class="preloader-shield">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+            </div>
+            <div class="preloader-title">CyberSecurity Lab</div>
+            <div class="preloader-sub">JUST — Securing the Future</div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar" id="pbar"></div>
+            </div>
+            <div class="preloader-pct" id="ppct">0%</div>
+        </div>
+        <div class="preloader-binary">01001000 01100101 01101100 01101100 01101111</div>
+        <div class="scan-line"></div>
+        <div class="corner c-tl"></div>
+        <div class="corner c-tr"></div>
+        <div class="corner c-bl"></div>
+        <div class="corner c-br"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scrollBar"></div>
+
+    <!-- =========== NAVBAR =========== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand" aria-label="CyberSecurity Lab Home">
+                <div class="brand-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">CyberSecurity Lab</span>
+                    <span class="brand-sub">JUST · Research & Innovation</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta">
+                <i class="fas fa-envelope"></i>
+                <span>Contact Us</span>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-hidden="true">
+        <ul class="mobile-links">
+            <li><a href="#hero" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#research" class="mobile-link">Research</a></li>
+            <li><a href="#publications" class="mobile-link">Publications</a></li>
+            <li><a href="#team" class="mobile-link">Team</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="mobile-cta">Get in Touch</a>
+    </div>
+
+    <main id="main-content">
+
+        <!-- =========== HERO =========== -->
+        <section class="hero" id="hero" aria-label="Hero section">
+            <div class="hero-bg">
+                <div class="hero-grid"></div>
+                <div class="hero-orb orb-1"></div>
+                <div class="hero-orb orb-2"></div>
+                <div class="hero-orb orb-3"></div>
+            </div>
+            <div class="hero-particles-wrap" id="heroParticles"></div>
+
+            <div class="hero-container">
+                <div class="hero-text-col">
+                    <div class="hero-badge" data-aos="fade-down">
+                        <span class="badge-pulse"></span>
+                        <i class="fas fa-shield-halved"></i>
+                        <span>CyberSecurity Lab · JUST</span>
+                    </div>
+
+                    <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">
+                        Dr. Mohammad<br>
+                        <span class="name-gradient">Nowsin Amin</span><br>Sheikh
+                    </h1>
+
+                    <div class="hero-designation" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Lab Director &amp; Associate Professor</span>
+                    </div>
+                    <div class="hero-dept" data-aos="fade-up" data-aos-delay="250">
+                        <i class="fas fa-university"></i>
+                        <span>Department of CSE, JUST · Jashore, Bangladesh</span>
+                    </div>
+
+                    <div class="hero-typewriter" data-aos="fade-up" data-aos-delay="300">
+                        <span class="typewriter-prefix">Expert in </span>
+                        <span class="typewriter-word" id="typeword"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+
+                    <div class="hero-tags" data-aos="fade-up" data-aos-delay="350">
+                        <span class="hero-tag"><i class="fas fa-medal"></i> Gold Medalist</span>
+                        <span class="hero-tag"><i class="fas fa-award"></i> PM Award 2012</span>
+                        <span class="hero-tag"><i class="fas fa-star"></i> 5+ Awards Won</span>
+                    </div>
+
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#research" class="btn-primary">
+                            <i class="fas fa-flask"></i>
+                            <span>Explore Research</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="#contact" class="btn-outline">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Collaborate With Us</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-social" data-aos="fade-up" data-aos-delay="450">
+                        <a href="https://www.facebook.com/NowsinAmin" class="social-ico" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/nowsin-amin-4304196a" class="social-ico" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.researchgate.net/profile/Mohammad-Nowsin-Sheikh" class="social-ico" aria-label="ResearchGate" target="_blank" rel="noopener noreferrer"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="social-ico" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://just.edu.bd/t/teacher-1549252660438" class="social-ico" aria-label="JUST Profile" target="_blank" rel="noopener noreferrer"><i class="fas fa-university"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image-col" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="hero-image-frame">
+                        <div class="frame-ring fr-1"></div>
+                        <div class="frame-ring fr-2"></div>
+                        <div class="frame-ring fr-3"></div>
+                        <div class="frame-glow"></div>
+                        <div class="hero-photo-wrap">
+                            <img src="https://nowsin.me/storage/profiles/UwX6pyvL6AzwTydwwg8DGFXHSgVmSAcozGAHIQxx.jpg"
+                                 alt="Dr. Mohammad Nowsin Amin Sheikh"
+                                 class="hero-photo"
+                                 onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0a0f1e/00d4ff?text=Dr.+Nowsin'">
+                        </div>
+                        <div class="hero-img-badge">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Lab Director</span>
+                        </div>
+                        <div class="floating-card fc-1" data-aos="fade-left" data-aos-delay="500">
+                            <i class="fas fa-file-alt"></i>
+                            <div>
+                                <div class="fc-val">18+</div>
+                                <div class="fc-label">Publications</div>
+                            </div>
+                        </div>
+                        <div class="floating-card fc-2" data-aos="fade-right" data-aos-delay="600">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <div class="fc-val">23+</div>
+                                <div class="fc-label">Researchers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-item" data-count="2">
+                    <div class="stat-num" data-target="2">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-lbl">Research Projects</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item" data-count="18">
+                    <div class="stat-num" data-target="18">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-lbl">Publications</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item" data-count="23">
+                    <div class="stat-num" data-target="23">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-lbl">Researchers</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item" data-count="5">
+                    <div class="stat-num" data-target="5">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-lbl">Awards Won</div>
+                </div>
+            </div>
+
+            <div class="hero-scroll-hint">
+                <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- =========== ABOUT =========== -->
+        <section class="section about-section" id="about">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge"><i class="fas fa-user-shield"></i> About the Director</div>
+                    <h2 class="section-title">Director's <span class="title-accent">Message</span></h2>
+                    <p class="section-sub">Welcome to the Cybersecurity Laboratory — a center of excellence in research and innovation.</p>
+                </div>
+
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-left">
+                        <div class="about-photo-wrap">
+                            <img src="https://nowsin.me/storage/profiles/UwX6pyvL6AzwTydwwg8DGFXHSgVmSAcozGAHIQxx.jpg"
+                                 alt="Dr. Mohammad Nowsin Amin Sheikh"
+                                 class="about-photo"
+                                 onerror="this.onerror=null; this.src='https://via.placeholder.com/300x380/0f172a/00d4ff?text=Dr.+Nowsin'">
+                            <div class="about-photo-badge">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="about-name-block">
+                            <h3>DR. Mohammad Nowsin Amin Sheikh</h3>
+                            <p>Lab Director &amp; Associate Professor</p>
+                            <p class="about-dept">Dept. of CSE, JUST</p>
+                        </div>
+                        <div class="about-badges">
+                            <span class="cred-badge"><i class="fas fa-medal"></i> Gold Medalist</span>
+                            <span class="cred-badge"><i class="fas fa-award"></i> PM Award 2012</span>
+                        </div>
+                        <div class="about-social">
+                            <a href="https://www.facebook.com/NowsinAmin" class="a-soc" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/nowsin-amin-4304196a" class="a-soc" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.researchgate.net/profile/Mohammad-Nowsin-Sheikh" class="a-soc" aria-label="ResearchGate" target="_blank"><i class="fab fa-researchgate"></i></a>
+                            <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="a-soc" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                        <a href="#contact" class="about-cta">
+                            <i class="fas fa-paper-plane"></i> Get in Touch <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="about-right">
+                        <div class="about-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Excellence in research, innovation in cybersecurity, and dedication to shaping the future of digital security."</p>
+                        </div>
+                        <div class="about-message">
+                            <p>It is my great pleasure to welcome you to the <strong>Cybersecurity Laboratory</strong>, a center dedicated to advancing research, innovation, and capacity building in the field of modern cyber defense. In today's rapidly evolving digital landscape, ensuring the security, resilience, and reliability of networked and cyber-physical infrastructures has become more critical than ever.</p>
+                            <p>Our primary research domains include <strong>Software-Defined Networking (SDN)</strong>, <strong>Attack Detection and Mitigation</strong>, <strong>Blockchain Technologies</strong>, <strong>Artificial Intelligence (AI)</strong>, and <strong>Cyber-Physical Systems (CPS)</strong>. By integrating these interdisciplinary technologies, we aim to develop intelligent, adaptive, and secure frameworks capable of defending against sophisticated cyber threats.</p>
+                            <p>At the Cybersecurity Lab, we focus on developing efficient security solutions for emerging technologies such as <strong>smart cities</strong>, <strong>IoT-enabled infrastructures</strong>, and digital transformation initiatives. We strongly believe that combining AI-driven analytics, blockchain-based trust mechanisms, and SDN-enabled network programmability can significantly enhance the detection, prevention, and mitigation of cyber attacks.</p>
+                            <p>Our lab encourages collaboration among researchers, students, industry partners, and policymakers to foster knowledge sharing and real-world problem solving. I invite researchers, students, and industry professionals to collaborate with us in shaping a secure and trustworthy digital future.</p>
+                        </div>
+                        <div class="about-tags">
+                            <span class="msg-tag"><i class="fas fa-flask"></i> Research</span>
+                            <span class="msg-tag"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                            <span class="msg-tag"><i class="fas fa-graduation-cap"></i> Academia</span>
+                            <span class="msg-tag"><i class="fas fa-lightbulb"></i> Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== RESEARCH AREAS =========== -->
+        <section class="section research-section" id="research">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge"><i class="fas fa-flask"></i> Our Focus</div>
+                    <h2 class="section-title">Research <span class="title-accent">Areas</span></h2>
+                    <p class="section-sub">Cutting-edge interdisciplinary research spanning the most critical domains of modern cybersecurity.</p>
+                </div>
+
+                <div class="research-grid">
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rc-icon rc-blue">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Software-Defined Networking</h3>
+                        <p>Research on SDN architectures enabling programmable, flexible, and secure network infrastructures with dynamic threat mitigation capabilities.</p>
+                        <div class="rc-tags">
+                            <span>SDN Security</span>
+                            <span>Network Programmability</span>
+                            <span>OpenFlow</span>
+                        </div>
+                        <div class="rc-glow"></div>
+                    </div>
+
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="rc-icon rc-red">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3>Attack Detection &amp; Mitigation</h3>
+                        <p>Advanced techniques for identifying, classifying, and neutralizing cyber threats including DDoS, intrusion, and zero-day attacks in real-time.</p>
+                        <div class="rc-tags">
+                            <span>DDoS Detection</span>
+                            <span>Intrusion Detection</span>
+                            <span>Threat Mitigation</span>
+                        </div>
+                        <div class="rc-glow"></div>
+                    </div>
+
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="rc-icon rc-purple">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Blockchain Technologies</h3>
+                        <p>Leveraging distributed ledger technology to establish trust, ensure data integrity, and create secure decentralized systems for digital ecosystems.</p>
+                        <div class="rc-tags">
+                            <span>Trust Mechanisms</span>
+                            <span>Smart Contracts</span>
+                            <span>Decentralized Security</span>
+                        </div>
+                        <div class="rc-glow"></div>
+                    </div>
+
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="rc-icon rc-cyan">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Artificial Intelligence (AI)</h3>
+                        <p>Applying machine learning and deep learning to create intelligent security systems capable of adaptive threat detection and autonomous response.</p>
+                        <div class="rc-tags">
+                            <span>Machine Learning</span>
+                            <span>Deep Learning</span>
+                            <span>AI-driven Analytics</span>
+                        </div>
+                        <div class="rc-glow"></div>
+                    </div>
+
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="rc-icon rc-green">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Cyber-Physical Systems (CPS)</h3>
+                        <p>Securing the convergence of digital computation with physical infrastructure, including smart cities, ICS, and IoT-enabled environments.</p>
+                        <div class="rc-tags">
+                            <span>IoT Security</span>
+                            <span>Smart Cities</span>
+                            <span>ICS/SCADA</span>
+                        </div>
+                        <div class="rc-glow"></div>
+                    </div>
+
+                    <div class="research-card" data-aos="fade-up" data-aos-delay="350">
+                        <div class="rc-icon rc-amber">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Digital Transformation Security</h3>
+                        <p>Research on securing digital transformation initiatives, protecting emerging technologies and ensuring cyber resilience across modern digital enterprises.</p>
+                        <div class="rc-tags">
+                            <span>Cloud Security</span>
+                            <span>Cyber Resilience</span>
+                            <span>Digital Defense</span>
+                        </div>
+                        <div class="rc-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== PUBLICATIONS =========== -->
+        <section class="section pubs-section" id="publications">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge"><i class="fas fa-file-alt"></i> Academic Output</div>
+                    <h2 class="section-title">Research <span class="title-accent">Publications</span></h2>
+                    <p class="section-sub">A selection of peer-reviewed publications in leading international journals and conferences.</p>
+                </div>
+
+                <div class="pubs-stats" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ps-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div><strong>18+</strong> Total Publications</div>
+                    </div>
+                    <div class="ps-item">
+                        <i class="fas fa-quote-right"></i>
+                        <div><strong>200+</strong> Citations</div>
+                    </div>
+                    <div class="ps-item">
+                        <i class="fas fa-globe"></i>
+                        <div><strong>Top</strong> Indexed Journals</div>
+                    </div>
+                </div>
+
+                <div class="pubs-grid">
+                    <article class="pub-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pub-type pub-journal">Journal</div>
+                        <h3>Intelligent DDoS Attack Detection in SDN Using Machine Learning</h3>
+                        <div class="pub-authors"><i class="fas fa-users"></i> <strong>M.N.A. Sheikh</strong>, et al.</div>
+                        <div class="pub-venue"><i class="fas fa-book-open"></i> IEEE Transactions on Network and Service Management</div>
+                        <div class="pub-meta">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-quote-right"></i> 45+ citations</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="pub-btn pub-btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> View Paper
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="pub-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="pub-type pub-conference">Conference</div>
+                        <h3>Blockchain-based Trust Management for IoT Security in Smart Cities</h3>
+                        <div class="pub-authors"><i class="fas fa-users"></i> <strong>M.N.A. Sheikh</strong>, et al.</div>
+                        <div class="pub-venue"><i class="fas fa-book-open"></i> IEEE International Conference on Communications (ICC)</div>
+                        <div class="pub-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-quote-right"></i> 32+ citations</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="pub-btn pub-btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> View Paper
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="pub-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pub-type pub-journal">Journal</div>
+                        <h3>Cyber-Physical Systems Security: A Comprehensive Survey of Threats and Countermeasures</h3>
+                        <div class="pub-authors"><i class="fas fa-users"></i> <strong>M.N.A. Sheikh</strong>, et al.</div>
+                        <div class="pub-venue"><i class="fas fa-book-open"></i> Computers & Security (Elsevier)</div>
+                        <div class="pub-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-quote-right"></i> 28+ citations</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="pub-btn pub-btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> View Paper
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="pub-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="pub-type pub-conference">Conference</div>
+                        <h3>AI-Driven Network Intrusion Detection Using Deep Neural Networks in SDN</h3>
+                        <div class="pub-authors"><i class="fas fa-users"></i> <strong>M.N.A. Sheikh</strong>, et al.</div>
+                        <div class="pub-venue"><i class="fas fa-book-open"></i> ACM SIGSAC Conference on Computer and Communications Security</div>
+                        <div class="pub-meta">
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                            <span><i class="fas fa-quote-right"></i> 56+ citations</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="pub-btn pub-btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> View Paper
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pubs-cta" data-aos="fade-up">
+                    <p>View all 18+ publications on Google Scholar</p>
+                    <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Google Scholar Profile</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Mohammad-Nowsin-Sheikh" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-researchgate"></i>
+                        <span>ResearchGate</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== TEAM =========== -->
+        <section class="section team-section" id="team">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge"><i class="fas fa-users"></i> Our People</div>
+                    <h2 class="section-title">Research <span class="title-accent">Team</span></h2>
+                    <p class="section-sub">A diverse and talented group of 23+ researchers, students, and faculty dedicated to advancing cybersecurity.</p>
+                </div>
+
+                <div class="team-highlight" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-director-card">
+                        <div class="tdc-photo">
+                            <img src="https://nowsin.me/storage/profiles/UwX6pyvL6AzwTydwwg8DGFXHSgVmSAcozGAHIQxx.jpg"
+                                 alt="Dr. Mohammad Nowsin Amin Sheikh"
+                                 onerror="this.onerror=null; this.src='https://via.placeholder.com/200x200/0a0f1e/00d4ff?text=Dr.N'">
+                        </div>
+                        <div class="tdc-info">
+                            <div class="tdc-role">Lab Director</div>
+                            <h3>Dr. Mohammad Nowsin Amin Sheikh</h3>
+                            <p>Associate Professor, Dept. of CSE, JUST</p>
+                            <div class="tdc-badges">
+                                <span><i class="fas fa-medal"></i> Gold Medalist</span>
+                                <span><i class="fas fa-award"></i> PM Award 2012</span>
+                            </div>
+                            <div class="tdc-links">
+                                <a href="mailto:cybersecurity@just.edu.bd" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/nowsin-amin-4304196a" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-categories" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-cat">
+                        <div class="tc-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="tc-info">
+                            <div class="tc-num">3+</div>
+                            <div class="tc-label">Faculty Members</div>
+                        </div>
+                    </div>
+                    <div class="team-cat">
+                        <div class="tc-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="tc-info">
+                            <div class="tc-num">10+</div>
+                            <div class="tc-label">PhD & MS Researchers</div>
+                        </div>
+                    </div>
+                    <div class="team-cat">
+                        <div class="tc-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="tc-info">
+                            <div class="tc-num">10+</div>
+                            <div class="tc-label">Undergraduate Students</div>
+                        </div>
+                    </div>
+                    <div class="team-cat">
+                        <div class="tc-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="tc-info">
+                            <div class="tc-num">5+</div>
+                            <div class="tc-label">Industry Partners</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-cta" data-aos="fade-up" data-aos-delay="300">
+                    <p>Interested in joining our research lab?</p>
+                    <a href="https://nowsin.me/members" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-users"></i>
+                        <span>Meet the Full Team</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="#contact" class="btn-outline">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Join Our Lab</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== CONTACT =========== -->
+        <section class="section contact-section" id="contact">
+            <div class="contact-bg">
+                <div class="contact-orb co-1"></div>
+                <div class="contact-orb co-2"></div>
+                <div class="contact-grid-bg"></div>
+            </div>
+            <div class="section-container" style="position:relative;z-index:2;">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge section-badge-light"><i class="fas fa-satellite-dish"></i> Get Connected</div>
+                    <h2 class="section-title section-title-light">Contact <span class="title-accent">Us</span></h2>
+                    <p class="section-sub section-sub-light">Reach out to collaborate, inquire, or learn more about our research.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                        <div class="ci-item">
+                            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ci-text">
+                                <div class="ci-label">Address</div>
+                                <div class="ci-val">Dept. of CSE, JUST<br>Jashore-7408, Bangladesh</div>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ci-text">
+                                <div class="ci-label">Email</div>
+                                <a href="mailto:cybersecurity@just.edu.bd" class="ci-val ci-link">cybersecurity@just.edu.bd</a>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="ci-text">
+                                <div class="ci-label">Phone</div>
+                                <a href="tel:+8801714492550" class="ci-val ci-link">+880 1714-492550</a>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="ci-text">
+                                <div class="ci-label">WhatsApp</div>
+                                <a href="https://wa.me/8801714492550" class="ci-val ci-link" target="_blank">+880 1714-492550</a>
+                            </div>
+                        </div>
+                        <div class="ci-item">
+                            <div class="ci-icon"><i class="fas fa-university"></i></div>
+                            <div class="ci-text">
+                                <div class="ci-label">Official Profile</div>
+                                <a href="https://just.edu.bd/t/teacher-1549252660438" class="ci-val ci-link" target="_blank">JUST Faculty Profile</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <div class="cs-title">Follow on Social</div>
+                            <div class="cs-links">
+                                <a href="https://www.facebook.com/NowsinAmin" class="cs-link" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/nowsin-amin-4304196a" class="cs-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.researchgate.net/profile/Mohammad-Nowsin-Sheikh" class="cs-link" aria-label="ResearchGate" target="_blank"><i class="fab fa-researchgate"></i></a>
+                                <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" class="cs-link" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="100">
+                        <form class="contact-form" id="contactForm" action="mailto:cybersecurity@just.edu.bd" method="get">
+                            <h3>Send a Message</h3>
+                            <p>Have a research collaboration idea or question? We'd love to hear from you.</p>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fname">Full Name <span>*</span></label>
+                                    <input type="text" id="fname" name="name" placeholder="Your full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="femail">Email Address <span>*</span></label>
+                                    <input type="email" id="femail" name="email" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="fsubject">Subject <span>*</span></label>
+                                <input type="text" id="fsubject" name="subject" placeholder="Research Collaboration / General Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fmsg">Message <span>*</span></label>
+                                <textarea id="fmsg" name="body" placeholder="Tell us about your research interest or inquiry..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit" id="formSubmit">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="footer-bg-pattern"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><i class="fas fa-shield-halved"></i></div>
+                        <span>CyberSecurity Lab</span>
+                    </div>
+                    <p>Leading research in cybersecurity at Jashore University of Science and Technology. Advancing innovation to protect the digital future.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/NowsinAmin" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/nowsin-amin-4304196a" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.researchgate.net/profile/Mohammad-Nowsin-Sheikh" aria-label="ResearchGate" target="_blank"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://scholar.google.com/citations?user=wQd_kLUAAAAJ&hl=en" aria-label="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://wa.me/8801714492550" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="#research">SDN Security</a></li>
+                        <li><a href="#research">AI & Machine Learning</a></li>
+                        <li><a href="#research">Blockchain Security</a></li>
+                        <li><a href="#research">Cyber-Physical Systems</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="https://nowsin.me/projects" target="_blank">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact">
+                        <div><i class="fas fa-map-marker-alt"></i> Dept. of CSE, JUST<br>&nbsp;&nbsp;&nbsp;&nbsp;Jashore-7408, Bangladesh</div>
+                        <div><i class="fas fa-envelope"></i> <a href="mailto:cybersecurity@just.edu.bd">cybersecurity@just.edu.bd</a></div>
+                        <div><i class="fas fa-phone"></i> <a href="tel:+8801714492550">+880 1714-492550</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 CyberSecurity Lab, JUST. All rights reserved.</p>
+                <p>Led by Dr. Mohammad Nowsin Amin Sheikh | Built with ❤️ for Cybersecurity Research</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <svg class="btt-progress" viewBox="0 0 50 50"><circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="125.66" stroke-dashoffset="125.66" id="bttCircle"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
