@@ -267,24 +267,16 @@ if (contactForm) {
     btn.style.opacity = '0.8';
     btn.disabled = true;
 
-    fetch(contactForm.action, {
-      method: 'POST',
-      body: new FormData(contactForm),
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
+    emailjs.sendForm('service_h346a97', 'template_1ul0t4b', this)
+    .then(() => {
         btn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
         btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
         contactForm.reset();
-      } else {
-        throw new Error('Form submission failed');
-      }
     })
-    .catch(error => {
-      btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i><span>Failed to send</span>';
-      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+    .catch((error) => {
+        console.error('FAILED...', error);
+        btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i><span>Failed to send</span>';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
     })
     .finally(() => {
       btn.style.opacity = '1';
