@@ -267,7 +267,7 @@ if (contactForm) {
     btn.style.opacity = '0.8';
     btn.disabled = true;
 
-    emailjs.sendForm('service_z6poi7o', 'template_notppai', this)
+    emailjs.sendForm('service_z6poi7o', 'template_notppai', contactForm)
     .then(() => {
         btn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
         btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
@@ -275,7 +275,8 @@ if (contactForm) {
     })
     .catch((error) => {
         console.error('FAILED...', error);
-        btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i><span>Failed to send</span>';
+        const errorMsg = error.text || error.message || 'Error';
+        btn.innerHTML = `<i class="fas fa-exclamation-triangle"></i><span style="font-size:0.8rem">Failed: ${errorMsg}</span>`;
         btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
     })
     .finally(() => {
