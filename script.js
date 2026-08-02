@@ -258,18 +258,42 @@ createParticles();
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
-    // Form uses mailto: action, let native handle it
-    // Add a brief visual feedback
+    e.preventDefault();
     const btn = document.getElementById('formSubmit');
-    if (btn) {
-      const original = btn.innerHTML;
-      btn.innerHTML = '<i class="fas fa-check"></i><span>Opening email client...</span>';
-      btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+    if (!btn) return;
+    
+    const originalContent = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Sending...</span>';
+    btn.style.opacity = '0.8';
+    btn.disabled = true;
+
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        btn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        contactForm.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    })
+    .catch(error => {
+      btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i><span>Failed to send</span>';
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+    })
+    .finally(() => {
+      btn.style.opacity = '1';
       setTimeout(() => {
-        btn.innerHTML = original;
+        btn.innerHTML = originalContent;
         btn.style.background = '';
-      }, 3000);
-    }
+        btn.disabled = false;
+      }, 3500);
+    });
   });
 }
 
