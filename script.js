@@ -267,7 +267,7 @@ if (contactForm) {
     btn.style.opacity = '0.8';
     btn.disabled = true;
 
-    emailjs.sendForm('service_h346a97', 'template_1ul0t4b', this)
+    emailjs.sendForm('service_z6poi7o', 'template_notppai', this)
     .then(() => {
         btn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
         btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
