@@ -267,36 +267,25 @@ if (contactForm) {
     btn.style.opacity = '0.8';
     btn.disabled = true;
 
-    const formData = {
-      service_id: 'service_z6poi7o',
-      template_id: 'template_notppai',
-      user_id: '7EnAcHs15v5Qtl1dP',
-      template_params: {
-          name: document.getElementById('fname').value,
-          email: document.getElementById('femail').value,
-          subject: document.getElementById('fsubject').value,
-          body: document.getElementById('fmsg').value
-      }
-    };
-
-    fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
     })
-    .then(response => {
-        if (response.ok) {
-            btn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
-            btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-            contactForm.reset();
-        } else {
-            return response.text().then(text => { throw new Error(text) });
-        }
+    .then(response => response.json())
+    .then(data => {
+      if (data.success || data.ok || (data.message && data.message.toLowerCase().includes('success'))) {
+        btn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        contactForm.reset();
+      } else {
+        throw new Error(data.message || 'Form submission failed');
+      }
     })
     .catch((error) => {
-        console.error('FAILED...', error);
-        btn.innerHTML = `<i class="fas fa-exclamation-triangle"></i><span style="font-size:0.8rem">Failed: ${error.message}</span>`;
-        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+      console.error('FAILED...', error);
+      btn.innerHTML = `<i class="fas fa-exclamation-triangle"></i><span style="font-size:0.8rem">Failed: Try again</span>`;
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
     })
     .finally(() => {
       btn.style.opacity = '1';
